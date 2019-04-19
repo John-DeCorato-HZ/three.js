@@ -88,7 +88,7 @@ void RE_Direct_Physical( const in IncidentLight directLight, const in GeometricC
 	BRDF_Specular_Multiscattering_Environment( geometry, material.specularColor, material.specularRoughness, singleScattering, multiScattering );
 
 	reflectedLight.directSpecular += ( 1.0 - clearCoatDHR ) * irradiance * BRDF_Specular_GGX( directLight, geometry, material.specularColor, material.specularRoughness );
-	reflectedLight.directSpecular += ( 1.0 - clearCoatDHR ( * irradiance * multiScattering;
+	reflectedLight.directSpecular += ( 1.0 - clearCoatDHR ) * irradiance * multiScattering;
 
 	reflectedLight.directDiffuse += ( 1.0 - clearCoatDHR ) * irradiance * BRDF_Diffuse_Lambert( material.diffuseColor );
 
